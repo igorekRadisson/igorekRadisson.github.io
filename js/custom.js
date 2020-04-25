@@ -1,3 +1,21 @@
+//menu pool in banner
+let dropdown = document.getElementsByClassName("dropdown-btn");
+
+let i;
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("mouseover", function() {
+    this.classList.toggle("active");
+    let dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+// ////menu pool in banner
+
+
 
 // now Date 
    function firstZero(event){
