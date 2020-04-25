@@ -165,18 +165,50 @@ body {
 
 
 /*BANNER*/
-.manyLanguage{
+.sidenav {
+    width: 150px;
+    margin-top: -191px;
+    position: absolute;
+    z-index: 1;
+    overflow-x: hidden;
+    background-color: #615D65; 
+}
+.dropdown-btn {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.sidenav a, .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    background: none;
+    width: 100%;
+    text-align: left;
+    outline: none;
+}
+.sidenav a:hover, .dropdown-btn:hover {
+    color: #CEA76B;
+    text-decoration: none;
+}
+.active {
+    background-color: #CEA76B;
+    color: white;
+}
+.dropdown-container {
+    display: none;
+    background-color: #262626;
+    padding-left: 20px;
+}
+.manyLanguage {
    float: right;
    margin-top: -193px;
 }
-.polandLang{
-     
-}
-.englendLang{
-   
-}
+.polandLang,
+.englendLang,
 .germanyLang{
-    
+    width: 20px;
 }
 .banner {
 	padding: 190px 0;
@@ -270,7 +302,7 @@ main {
     display: flex;
     margin-left: 84%;
     margin-top: -40px;
-    height: 40px;
+    height: 30px;
     border-radius: 10px;
 }
 .collections,
