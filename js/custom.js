@@ -1,3 +1,24 @@
+
+// now Date 
+   function firstZero(event){
+       if(event < 10){
+        event = '0' + event;
+       }
+       return event;
+   }
+
+   function nowDate(){
+    let dateNow = new Date();
+    let day = firstZero(dateNow.getDate()) + ' / ';
+    let month = firstZero(dateNow.getMonth()+1) + ' / ';
+    let year = dateNow.getFullYear() + ' r.';
+    return day+month+year;
+   }
+   document.querySelector('.dateNow').innerHTML = nowDate();
+// ////now Date
+
+
+
 // more text, main part in index.html
 function showText(el) {
     if(el.previousElementSibling.clientHeight === 80) {
@@ -51,7 +72,7 @@ function showText(el) {
 
 // slider in index6.html
 document.body.onload = startAction;
-let arr = ['Русская баня','Римская баня', 'Финская баня',  'Японская баня', 'Инфракрасная', 'Скандинавская', 'Турецкая сауна'];
+let arr = ['Rosyjska łażnia','Rzymska łażnia', 'Finska łażnia',  'Japonska łażnia', 'Podczerwień', 'Skandynawska', 'Turecka łażnia'];
     let arrTb = [
         ['images/rusSauna1.jpg','images/rusSauna2.jpg', 'images/rusSauna3.jpg'],['images/rimSauna1.jpg','images/rimSauna2.jpg', 'images/rimSauna3.jpg'], ['images/finnSauna1.jpg','images/finnSauna2.jpg', 'images/finnSauna3.jpg'], ['images/japanSauna1.jpg','images/japanSauna2.jpg', 'images/japanSauna3.jpg'],['images/infraSauna1.jpg','images/infraSauna2.jpg', 'images/infraSauna3.jpg'], ['images/scandinavianSauna1.jpg','images/scandinavianSauna2.jpg', 'images/scandinavianSauna3.jpg'],['images/turkishSauna1.jpg','images/turkishSauna2.jpg', 'images/turkishSauna3.jpg']
     ]; 
@@ -67,6 +88,7 @@ function startAction(){
     putMeaning(arr, arrTb, position);
 
     prev.addEventListener('click', function(){
+
     position > 0 ? position-- : position = arr.length - 1;
         putMeaning(arr,arrTb, position);
     });
