@@ -1,3 +1,36 @@
+
+// index4.html first element in table
+let table = document.querySelector('.main_tab');
+    let yellowLineTdS = document.querySelector('.yellowLineTdS');
+
+    yellowLineTdS.addEventListener('click', delAllAndCreate);
+
+    function delAllAndCreate() {
+       table.classList.add('createAll');
+       if(table){
+        let tds = document.querySelectorAll('td');
+        for(let td of tds){
+            td.classList.add('deleteAll');
+        }
+           let citrusName = document.querySelector('.citrusName');
+           citrusName.classList.remove('citrusName');
+           citrusName.classList.add('citrusNamePositionCorrect');
+           
+           // let tableOilsYellow = document.querySelector('.table_oils_yellow');
+           // tableOilsYellow.classList.add('delMainFirstPart');
+
+
+           // if (citrusName) {
+           //   let citrusImg = document.querySelector('citrusImg');
+           // citrusImg.classList.remove('citrusImg');
+           // citrusImg.classList.add('citrusImgPositionCorrect');
+           // }  
+       }   
+    }
+// ////index4.html first element in table
+
+
+
 //menu pool in banner
 let dropdown = document.getElementsByClassName("dropdown-btn");
 
